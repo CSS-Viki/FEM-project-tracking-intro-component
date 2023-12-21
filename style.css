@@ -70,7 +70,7 @@ nav .lists li a:hover,
 }
 
 .lists li:nth-child(4) i,
-.login {
+.lists .login {
   color: var(--Grayish-Blue);
 }
 .lists .fa-solid {
