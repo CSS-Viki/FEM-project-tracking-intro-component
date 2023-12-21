@@ -1,0 +1,228 @@
+:root {
+  --red: hsl(0, 100%, 68%);
+
+  --Very-Dark-Blue: hsl(230, 29%, 20%);
+  --Dark-Grayish-Blue: hsl(230, 11%, 40%);
+  --Grayish-Blue: hsl(231, 7%, 65%);
+  --Light-Grayish-Blue: hsl(203, 31%, 95%);
+
+  --Font-family-specifics: "Barlow Condensed", sans-serif;
+  --Font-family-default: "Barlow", sans-serif;
+
+  --Font-size: 18px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  position: relative;
+  font-family: var(--Font-family-default);
+  font-size: var(--Font-size);
+  overflow-x: hidden;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 65rem;
+  margin: 50px auto;
+}
+nav .lists {
+  display: flex;
+  flex: 1;
+  justify-content: end;
+  gap: 30px;
+}
+nav .lists li a {
+  color: var(--Very-Dark-Blue);
+  font-family: var(--Font-family-specifics);
+}
+nav .lists li a:hover,
+.login:hover {
+  text-decoration: underline;
+}
+.lists li:nth-child(4) {
+  display: flex;
+  align-items: center;
+}
+.login {
+  font-family: var(--Font-family-specifics);
+}
+
+.lists li:nth-child(4) i,
+.login {
+  color: var(--Grayish-Blue);
+}
+.lists .fa-solid {
+  font-size: 0.3rem;
+}
+nav > div:last-child {
+  display: none;
+}
+
+section {
+  display: flex;
+  max-width: 65rem;
+  margin: 100px auto;
+  gap: 30px;
+}
+
+section div:first-child {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 30px;
+}
+section div:first-child .headline {
+  width: 100%;
+  color: var(--Grayish-Blue);
+  letter-spacing: 5px;
+  font-family: var(--Font-family-specifics);
+}
+section div:first-child .headline span {
+  background-color: var(--Very-Dark-Blue);
+  color: var(--Light-Grayish-Blue);
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 100px;
+  padding: 0.2em 0.4em;
+  margin-right: 10px;
+}
+section .headline-tag {
+  font-weight: 700;
+  font-size: 3rem;
+  padding-block: 25px 35px;
+  line-height: 1;
+  font-family: var(--Font-family-specifics);
+  color: var(--Very-Dark-Blue);
+  letter-spacing: 1.4px;
+}
+section div:first-child p {
+  color: var(--Dark-Grayish-Blue);
+  width: 55%;
+}
+section .demo-schedule {
+  font-family: var(--Font-family-specifics);
+  color: var(--Grayish-Blue);
+  margin-top: 70px;
+  letter-spacing: 1.5px;
+}
+section .demo-schedule span {
+  background-color: var(--red);
+  color: var(--Light-Grayish-Blue);
+  padding: 0.4em 1em;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+section div:last-child {
+  width: 50%;
+}
+section div:last-child img {
+  width: 170%;
+}
+.backdrop-image {
+  position: absolute;
+  top: -500px;
+  z-index: -9999999;
+  right: -300px;
+}
+.attribution {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+.attribution a {
+  color: var(--red);
+}
+@media (max-width: 600px) {
+  nav,
+  section {
+    margin: 30px;
+  }
+  nav .lists {
+    display: none;
+  }
+  .lists.active {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    top: 50px;
+    padding: 1.5em;
+    border-radius: 8px;
+    background-color: #fff;
+    z-index: 99999;
+    box-shadow: 2px 30px 75px -13px rgba(0, 0, 0, 0.53);
+    -webkit-box-shadow: 2px 30px 75px -13px rgba(0, 0, 0, 0.53);
+    -moz-box-shadow: 2px 30px 75px -13px rgba(0, 0, 0, 0.53);
+  }
+  .lists a {
+    font-weight: 700;
+  }
+  .lists li:nth-child(4) i {
+    display: none;
+  }
+  .lists li:nth-child(4) {
+    height: 1px;
+    width: 100%;
+    background-color: var(--Grayish-Blue);
+  }
+
+  nav > div:last-child {
+    display: flex;
+  }
+  section {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+
+  section div:first-child,
+  section div:last-child {
+    width: 100%;
+  }
+  section div:last-child img {
+    margin-left: -30px;
+    width: 165%;
+  }
+  section .headline-tag {
+    font-size: 2.5rem;
+    padding-block: 20px;
+  }
+
+  section div:first-child p {
+    width: 70%;
+  }
+  section .demo-schedule {
+    margin-top: 40px;
+  }
+  .attribution {
+    text-align: start;
+    margin-left: 30px;
+  }
+  .backdrop-image {
+    top: -400px;
+    right: -720px;
+  }
+}
