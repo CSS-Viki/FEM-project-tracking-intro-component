@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [live site](https://your-live-site-url.com)
+- Live Site URL: [live site](https://project-tracking-intro-component.onrender.com)
 
 Let's [connect](https://twitter.com/vykiddeh_).
 
